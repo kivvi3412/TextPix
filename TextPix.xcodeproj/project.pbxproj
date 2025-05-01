@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550E2E2A2DC3B77500561DEE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 550E2E292DC3B76C00561DEE /* README.md */; };
 		557CABDE2DC10D0200F1C613 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 557CABDD2DC10D0200F1C613 /* KeyboardShortcuts */; };
 		557CABEF2DC1D20A00F1C613 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 557CABEE2DC1D20A00F1C613 /* Ink */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550E2E292DC3B76C00561DEE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		557CABCD2DC0FDC200F1C613 /* TextPix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextPix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557CAC132DC2A2C800F1C613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		550E2E2B2DC3B7A900561DEE /* images */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = images;
+			sourceTree = "<group>";
+		};
 		557CABCF2DC0FDC200F1C613 /* TextPix */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = TextPix;
@@ -40,6 +47,8 @@
 		557CABC42DC0FDC200F1C613 = {
 			isa = PBXGroup;
 			children = (
+				550E2E2B2DC3B7A900561DEE /* images */,
+				550E2E292DC3B76C00561DEE /* README.md */,
 				557CABCF2DC0FDC200F1C613 /* TextPix */,
 				557CABCE2DC0FDC200F1C613 /* Products */,
 				557CAC132DC2A2C800F1C613 /* Info.plist */,
@@ -70,6 +79,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				550E2E2B2DC3B7A900561DEE /* images */,
 				557CABCF2DC0FDC200F1C613 /* TextPix */,
 			);
 			name = TextPix;
@@ -124,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550E2E2A2DC3B77500561DEE /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
