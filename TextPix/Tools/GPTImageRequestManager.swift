@@ -34,7 +34,7 @@ class GPTImageRequestManager {
         }
         
         // 创建API请求URL
-        let url = URL(string: "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions")!
+        let url = URL(string: appState.endpoint)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("Bearer \(appState.apiKey)", forHTTPHeaderField: "Authorization")
