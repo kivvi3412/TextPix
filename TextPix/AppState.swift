@@ -48,6 +48,20 @@ class AppState: ObservableObject {
             UserDefaults.standard.set(endpoint, forKey: "endpoint")
         }
     }
+    @Published var inferenceEnabled: Bool = UserDefaults.standard.bool(forKey: "inferenceEnabled") {
+        didSet {
+            UserDefaults.standard.set(inferenceEnabled, forKey: "inferenceEnabled")
+        }
+    }
+
+    @Published var inferenceLevel: String = UserDefaults.standard.string(forKey: "inferenceLevel")
+    ?? "medium" {
+        didSet {
+            UserDefaults.standard.set(inferenceLevel, forKey: "inferenceLevel")
+        }
+    }
+        
+    
     @Published var systemPrompt: String = UserDefaults.standard.string(forKey: "systemPrompt")
     ?? """
         1. OCR输出为markdown文本 (如果有序和无序列表使用markdown标准语法)

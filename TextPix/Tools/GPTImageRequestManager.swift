@@ -41,27 +41,35 @@ class GPTImageRequestManager {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         // 创建请求体
-        let requestBody: [String: Any] = [
-            "model": appState.model,
-            "messages": [
-                [
-                    "role": "system",
-                    "content": appState.systemPrompt
-                ],
-                [
-                    "role": "user",
-                    "content": [
-                        [
-                            "type": "image_url",
-                            "image_url": [
-                                "url": "data:image/jpeg;base64,\(base64Image)"
-                            ]
+        let messages: [[String: Any]] = [
+            [
+                "role": "system",
+                "content": appState.systemPrompt
+            ],
+            [
+                "role": "user",
+                "content": [
+                    [
+                        "type": "image_url",
+                        "image_url": [
+                            "url": "data:image/jpeg;base64,\(base64Image)"
                         ]
                     ]
                 ]
             ]
         ]
-        
+
+        // 先生成一个通用的 requestBody
+        var requestBody: [String: Any] = [
+            "model": appState.model,
+            "messages": messages
+        ]
+
+        // 只有在 inferenceEnabled==true 时再补充 reasoning_effort 字段
+        if appState.inferenceEnabled {
+            requestBody["reasoning_effort"] = appState.inferenceLevel
+        }
+    
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: requestBody)
         } catch {

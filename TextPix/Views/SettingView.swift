@@ -56,6 +56,25 @@ struct SettingsView: View {
                             .font(.subheadline)
                             .cornerRadius(8)
                     }
+                    
+                    // 是否开启推理(按钮)，以及推理强度列表 low medium high none
+                    HStack(spacing: 2) {
+                        Toggle(isOn: $appState.inferenceEnabled) {
+                            Text("启用推理")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                        .toggleStyle(SwitchToggleStyle())
+                        
+                        Spacer()
+                        Picker("推理强度", selection: $appState.inferenceLevel) {
+                            Text("low").tag("low")
+                            Text("medium").tag("medium")
+                            Text("high").tag("high")
+                            Text("none").tag("none")
+                        }
+                        .pickerStyle(.segmented)
+                    }
                 }
                 
                 // OCR提示词设置
