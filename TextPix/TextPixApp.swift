@@ -7,7 +7,7 @@
 
 import SwiftUI
 import KeyboardShortcuts
-
+import UserNotifications
 
 @main
 struct TextPixApp: App {
@@ -17,6 +17,7 @@ struct TextPixApp: App {
     
     init() {
         keyboardManager = KeyboardManager(screenshotManager: screenshotManager)
+        _ = NotificationManager.shared
     }
     
     var body: some Scene {

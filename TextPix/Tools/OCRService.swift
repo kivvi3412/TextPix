@@ -26,7 +26,7 @@ class OCRService {
             // 这里我们只需要调用它，它会在完成或失败时更新 AppState
             try await gptManager.requestCompletion(image: image, systemPrompt: appState.systemPrompt)
             // 成功时，gptManager 内部会更新 appState.markdownText
-            print("OCR 请求成功")
+            NotificationManager.shared.sendOCRResult(success: true)
             
             if (appState.autoCopy) {
                 // 自动复制到剪切板
@@ -36,7 +36,7 @@ class OCRService {
             }
         } catch {
             // 失败时，gptManager 内部会更新 appState.markdownText 为错误信息
-            print("OCR 请求失败: \(error.localizedDescription)")
+            NotificationManager.shared.sendOCRResult(success: false, errorMessage: error.localizedDescription)
             // 确保即使出错也更新状态
             appState.isProcessing = false
             // 保留 gptManager 设置的错误信息
