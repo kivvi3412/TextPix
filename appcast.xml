@@ -1,0 +1,26 @@
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+    <channel>
+        <title>TextPix Updates</title>
+        <link>https://raw.githubusercontent.com/Oops418/TextPix/refs/heads/main/appcast.xml</link>
+        <description>Updates for TextPix.</description>
+        <language>en</language>
+        <item>
+            <title>Version v1.2.0</title>
+            <link>https://github.com/kivvi3412/TextPix</link>
+            <sparkle:version>2.0</sparkle:version>
+            <description><![CDATA[
+                <h3>新功能</h3>
+                <ul>
+                    <li>增加了OCR成功通知</li>
+                </ul>
+            ]]></description>
+            <pubDate>Fri, 13 Jun 2025 07:00:00 +0000</pubDate>
+            <enclosure
+                url="https://github.com/kivvi3412/TextPix/releases/download/v1.2.0/TextPix.2025-06-13.12-33-25.zip"
+                length="0"
+                type="application/octet-stream"
+            />
+        </item>
+    </channel>
+</rss>
