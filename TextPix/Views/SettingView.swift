@@ -7,10 +7,12 @@
 
 import SwiftUI
 import KeyboardShortcuts
+import Sparkle
 
 struct SettingsView: View {
     @ObservedObject private var appState = AppState.shared
-    
+    @Environment(\.updater) private var updater: SPUUpdater?
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
@@ -92,6 +94,11 @@ struct SettingsView: View {
                     Toggle("OCR结果自动复制到剪切板", isOn: $appState.autoCopy)
                         
                     Spacer() // 将按钮推到右侧
+                    
+                    Button("Check for Updates") {
+                        updater?.checkForUpdates()
+                    }
+                    
                     Button("Quit") {
                         NSApplication.shared.terminate(nil)
                     }
