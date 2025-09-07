@@ -36,7 +36,7 @@ final class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         let content       = UNMutableNotificationContent()
         content.title     = success ? "识别成功" : "识别失败"
         content.body      = success ? "文本已生成并可复制使用。" : (errorMessage ?? "未知错误")
-        content.sound     = .none
+        content.sound     = success ? .default : UNNotificationSound(named: UNNotificationSoundName("Glass.aiff"))
         
         let request = UNNotificationRequest(
             identifier: UUID().uuidString,
