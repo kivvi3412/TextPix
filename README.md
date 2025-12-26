@@ -16,8 +16,9 @@
 
 - 自定义配置: 在「Setting」页可设置 AI 接口地址、模型、API Key、系统提示词及快捷键  
 
-   >  模型建议使用 gemini-flash  API 地址 : `https://generativelanguage.googleapis.com/v1beta/openai/chat/completions`
-   >  国内模型使用 qwen-2.5-vl 效果还可以，API获取入口 [阿里云百炼](https://bailian.console.aliyun.com/)
+   >  模型建议使用 gemini-flash  API 地址 : `https://generativelanguage.googleapis.com/v1beta/openai/chat/completions`  
+   >  国内模型使用 qwen-2.5-vl 效果还可以，API获取入口 [阿里云百炼](https://bailian.console.aliyun.com/)  
+   >  gemini-flash 配置案例:  ![](images/gemini-api.png)
 
 - ![](images/ocr_markdown_latex.png)
 

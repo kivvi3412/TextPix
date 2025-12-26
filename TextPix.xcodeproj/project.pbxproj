@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		550E2E2A2DC3B77500561DEE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 550E2E292DC3B76C00561DEE /* README.md */; };
 		557CABDE2DC10D0200F1C613 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 557CABDD2DC10D0200F1C613 /* KeyboardShortcuts */; };
 		557CABEF2DC1D20A00F1C613 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 557CABEE2DC1D20A00F1C613 /* Ink */; };
+		558DFC5F2EFEE6A500B7B708 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 558DFC5E2EFEE6A500B7B708 /* MarkdownUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,9 +18,22 @@
 		557CAC132DC2A2C800F1C613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		55D9CCA22EFEF14C009C8FE8 /* Exceptions for "images" folder in "TextPix" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ocr_code.png,
+			);
+			target = 557CABCC2DC0FDC200F1C613 /* TextPix */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		550E2E2B2DC3B7A900561DEE /* images */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				55D9CCA22EFEF14C009C8FE8 /* Exceptions for "images" folder in "TextPix" target */,
+			);
 			path = images;
 			sourceTree = "<group>";
 		};
@@ -36,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558DFC5F2EFEE6A500B7B708 /* MarkdownUI in Frameworks */,
 				557CABDE2DC10D0200F1C613 /* KeyboardShortcuts in Frameworks */,
 				557CABEF2DC1D20A00F1C613 /* Ink in Frameworks */,
 			);
@@ -86,6 +100,7 @@
 			packageProductDependencies = (
 				557CABDD2DC10D0200F1C613 /* KeyboardShortcuts */,
 				557CABEE2DC1D20A00F1C613 /* Ink */,
+				558DFC5E2EFEE6A500B7B708 /* MarkdownUI */,
 			);
 			productName = TextPix;
 			productReference = 557CABCD2DC0FDC200F1C613 /* TextPix.app */;
@@ -99,7 +114,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1630;
-				LastUpgradeCheck = 1630;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					557CABCC2DC0FDC200F1C613 = {
 						CreatedOnToolsVersion = 16.3;
@@ -118,6 +133,7 @@
 			packageReferences = (
 				557CABDC2DC10D0200F1C613 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 				557CABED2DC1D20A00F1C613 /* XCRemoteSwiftPackageReference "Ink" */,
+				558DFC5D2EFEE6A500B7B708 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 557CABCE2DC0FDC200F1C613 /* Products */;
@@ -134,7 +150,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				550E2E2A2DC3B77500561DEE /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +200,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 33499L739V;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -210,6 +226,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -249,6 +266,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 33499L739V;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -267,6 +285,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -280,9 +299,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 33499L739V;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -291,7 +315,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = kivvi.TextPix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -309,9 +333,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 33499L739V;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -320,7 +349,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = kivvi.TextPix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -369,6 +398,14 @@
 				minimumVersion = 0.6.0;
 			};
 		};
+		558DFC5D2EFEE6A500B7B708 /* XCRemoteSwiftPackageReference "MarkdownUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/MarkdownUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -381,6 +418,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 557CABED2DC1D20A00F1C613 /* XCRemoteSwiftPackageReference "Ink" */;
 			productName = Ink;
+		};
+		558DFC5E2EFEE6A500B7B708 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 558DFC5D2EFEE6A500B7B708 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
+			productName = MarkdownUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
