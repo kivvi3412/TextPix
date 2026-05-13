@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		557CABDE2DC10D0200F1C613 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 557CABDD2DC10D0200F1C613 /* KeyboardShortcuts */; };
-		557CABEF2DC1D20A00F1C613 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 557CABEE2DC1D20A00F1C613 /* Ink */; };
-		558DFC5F2EFEE6A500B7B708 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 558DFC5E2EFEE6A500B7B708 /* MarkdownUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		550E2E292DC3B76C00561DEE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		557CABCD2DC0FDC200F1C613 /* TextPix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextPix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557CAC132DC2A2C800F1C613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D085D02FB45C500013FFB2 /* TextPix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = TextPix.app; path = /Users/kivvi/Documents/Xcode/TextPix/build/Debug/TextPix.app; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -49,9 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				558DFC5F2EFEE6A500B7B708 /* MarkdownUI in Frameworks */,
 				557CABDE2DC10D0200F1C613 /* KeyboardShortcuts in Frameworks */,
-				557CABEF2DC1D20A00F1C613 /* Ink in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,17 +60,8 @@
 				550E2E2B2DC3B7A900561DEE /* images */,
 				550E2E292DC3B76C00561DEE /* README.md */,
 				557CABCF2DC0FDC200F1C613 /* TextPix */,
-				557CABCE2DC0FDC200F1C613 /* Products */,
 				557CAC132DC2A2C800F1C613 /* Info.plist */,
 			);
-			sourceTree = "<group>";
-		};
-		557CABCE2DC0FDC200F1C613 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				557CABCD2DC0FDC200F1C613 /* TextPix.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,11 +86,9 @@
 			name = TextPix;
 			packageProductDependencies = (
 				557CABDD2DC10D0200F1C613 /* KeyboardShortcuts */,
-				557CABEE2DC1D20A00F1C613 /* Ink */,
-				558DFC5E2EFEE6A500B7B708 /* MarkdownUI */,
 			);
 			productName = TextPix;
-			productReference = 557CABCD2DC0FDC200F1C613 /* TextPix.app */;
+			productReference = 55D085D02FB45C500013FFB2 /* TextPix.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,11 +117,9 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				557CABDC2DC10D0200F1C613 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
-				557CABED2DC1D20A00F1C613 /* XCRemoteSwiftPackageReference "Ink" */,
-				558DFC5D2EFEE6A500B7B708 /* XCRemoteSwiftPackageReference "MarkdownUI" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 557CABCE2DC0FDC200F1C613 /* Products */;
+			productRefGroup = 557CABC42DC0FDC200F1C613;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -390,22 +373,6 @@
 				minimumVersion = 2.3.0;
 			};
 		};
-		557CABED2DC1D20A00F1C613 /* XCRemoteSwiftPackageReference "Ink" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JohnSundell/Ink.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.6.0;
-			};
-		};
-		558DFC5D2EFEE6A500B7B708 /* XCRemoteSwiftPackageReference "MarkdownUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gonzalezreal/MarkdownUI";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -413,16 +380,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 557CABDC2DC10D0200F1C613 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
 			productName = KeyboardShortcuts;
-		};
-		557CABEE2DC1D20A00F1C613 /* Ink */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 557CABED2DC1D20A00F1C613 /* XCRemoteSwiftPackageReference "Ink" */;
-			productName = Ink;
-		};
-		558DFC5E2EFEE6A500B7B708 /* MarkdownUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 558DFC5D2EFEE6A500B7B708 /* XCRemoteSwiftPackageReference "MarkdownUI" */;
-			productName = MarkdownUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
