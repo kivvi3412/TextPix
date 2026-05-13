@@ -13,7 +13,7 @@
 /* Begin PBXFileReference section */
 		550E2E292DC3B76C00561DEE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		557CAC132DC2A2C800F1C613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55D085D02FB45C500013FFB2 /* TextPix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = TextPix.app; path = /Users/kivvi/Documents/Xcode/TextPix/build/Debug/TextPix.app; sourceTree = "<absolute>"; };
+		558187502FB47891003C2BAA /* TextPix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextPix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -61,6 +61,7 @@
 				550E2E292DC3B76C00561DEE /* README.md */,
 				557CABCF2DC0FDC200F1C613 /* TextPix */,
 				557CAC132DC2A2C800F1C613 /* Info.plist */,
+				558187502FB47891003C2BAA /* TextPix.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,7 +89,7 @@
 				557CABDD2DC10D0200F1C613 /* KeyboardShortcuts */,
 			);
 			productName = TextPix;
-			productReference = 55D085D02FB45C500013FFB2 /* TextPix.app */;
+			productReference = 558187502FB47891003C2BAA /* TextPix.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -292,13 +293,14 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 1.3.1;
+				MARKETING_VERSION = 1.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = kivvi.TextPix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -326,13 +328,14 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 1.3.1;
+				MARKETING_VERSION = 1.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = kivvi.TextPix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;

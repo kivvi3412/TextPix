@@ -55,9 +55,16 @@ class AppState: ObservableObject {
     }
 
     @Published var inferenceLevel: String = UserDefaults.standard.string(forKey: "inferenceLevel")
-    ?? "medium" {
+    ?? "minimal" {
         didSet {
             UserDefaults.standard.set(inferenceLevel, forKey: "inferenceLevel")
+        }
+    }
+
+    @Published var customInferenceLevel: String = UserDefaults.standard.string(forKey: "customInferenceLevel")
+    ?? "" {
+        didSet {
+            UserDefaults.standard.set(customInferenceLevel, forKey: "customInferenceLevel")
         }
     }
         

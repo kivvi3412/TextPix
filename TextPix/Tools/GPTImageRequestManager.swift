@@ -67,7 +67,12 @@ class GPTImageRequestManager {
 
         // 只有在 inferenceEnabled==true 时再补充 reasoning_effort 字段
         if appState.inferenceEnabled {
-            requestBody["reasoning_effort"] = appState.inferenceLevel
+            let inferenceLevel = appState.inferenceLevel == "custom"
+                ? appState.customInferenceLevel.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                : appState.inferenceLevel
+            if !inferenceLevel.isEmpty {
+                requestBody["reasoning_effort"] = inferenceLevel
+            }
         }
     
         do {

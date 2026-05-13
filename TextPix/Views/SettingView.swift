@@ -57,7 +57,7 @@ struct SettingsView: View {
                             .cornerRadius(8)
                     }
                     
-                    // 是否开启推理(按钮)，以及推理强度列表 low medium high none
+                    // 是否开启推理(按钮)，以及推理强度列表 minimal low medium high 自定义
                     HStack(spacing: 2) {
                         Toggle(isOn: $appState.inferenceEnabled) {
                             Text("启用推理")
@@ -65,15 +65,21 @@ struct SettingsView: View {
                                 .foregroundColor(.secondary)
                         }
                         .toggleStyle(SwitchToggleStyle())
-                        
+
                         Spacer()
                         Picker("推理强度", selection: $appState.inferenceLevel) {
+                            Text("minimal").tag("minimal")
                             Text("low").tag("low")
                             Text("medium").tag("medium")
                             Text("high").tag("high")
-                            Text("none").tag("none")
+                            Text("自定义").tag("custom")
                         }
                         .pickerStyle(.segmented)
+                    }
+                    if appState.inferenceLevel == "custom" {
+                        TextField("自定义推理强度", text: $appState.customInferenceLevel)
+                            .textFieldStyle(.roundedBorder)
+                            .font(.subheadline)
                     }
                 }
                 
